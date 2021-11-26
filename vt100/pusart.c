@@ -1,6 +1,7 @@
 #include <SDL.h>
 #include <stdlib.h>
 #include "vt100.h"
+#include "event.h"
 
 // Intel 8251 USART.
 

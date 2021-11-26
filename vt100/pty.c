@@ -10,6 +10,7 @@
 #include <sys/stat.h>
 #include <termios.h>
 #include "vt100.h"
+#include "event.h"
 #include <SDL.h>
 
 int pty;

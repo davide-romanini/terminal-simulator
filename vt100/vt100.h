@@ -27,16 +27,6 @@ typedef uint8_t u8;
 #define RST6 0xF7
 #define RST7 0xFF
 
-struct event {
-  unsigned cycles;
-  char *name;
-  void (*callback) (void);
-  struct event *next;
-};
-
-#define EVENT(NAME, CALLBACK) \
-  struct event NAME = { 0, #NAME, (CALLBACK), NULL }
-
 extern u8 memory[0x10000];
 extern u16 starta;
 extern unsigned long long get_cycles (void);
@@ -94,9 +84,6 @@ extern void key_up (u8 code);
 #endif
 extern FILE *log_file;
 extern void logger (const char *device, const char *format, ...);
-extern void events (unsigned cycles);
-extern void add_event (unsigned cycles, struct event *event);
-extern void print_events (FILE *);
 extern void mkpty (char **cmd, int th, int tw, int fw, int fh);
 extern void send_break (void);
 extern void send_character (u8 data);

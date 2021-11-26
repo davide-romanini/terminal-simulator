@@ -7,6 +7,7 @@
 #include <errno.h>
 #include <sys/ioctl.h>
 #include "opengl.h"
+#include "event.h"
 
 int full = 0;
 int quick = 0;

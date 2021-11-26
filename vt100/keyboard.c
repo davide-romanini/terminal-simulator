@@ -1,6 +1,7 @@
 #include <SDL.h>
 #include <string.h>
 #include "vt100.h"
+#include "event.h"
 
 static u8 scan;
 static u8 tx_data;
